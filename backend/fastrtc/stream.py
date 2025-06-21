@@ -336,6 +336,8 @@ class Stream(WebRTCConnectionMixin):
                         or not supported for UI generation.
         """
         ui_args = ui_args or {}
+        ui_args.setdefault("title", "齐天大圣🐒")
+        print(f"Using title: {ui_args.get('title')}")
         same_components = []
         additional_input_components = self.additional_input_components or []
         additional_output_components = self.additional_output_components or []
@@ -358,7 +360,7 @@ class Stream(WebRTCConnectionMixin):
                     gr.HTML(
                         f"""
                     <h1 style='text-align: center'>
-                    {ui_args.get("title", "Video Streaming (Powered by FastRTC ⚡️)")}
+                    {ui_args.get("title", "猴哥🐒")}
                     </h1>
                     """
                     )
